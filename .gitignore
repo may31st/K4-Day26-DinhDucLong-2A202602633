@@ -6,4 +6,6 @@ venv/
 **/.venv
 .adk/
 *.db
+.uv-cache/
+.lab-runtime/
 **/.DS_Store

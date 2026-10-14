@@ -1,5 +1,11 @@
 # Phân biệt MCP và Function Calling
 
+## Bài thực hành của Đinh Đức Long — 2A202602633
+
+Đã chạy các phần bắt buộc ngày 14/10/2026. Xem [báo cáo và cách chạy lại](BAI_NOP.md),
+[9 ảnh bằng chứng](screenshots/) và [output/sự kiện thực tế](screenshots/logs/).
+Gemini sử dụng `gemini-3.5-flash` vì model trong repo gốc không còn khả dụng cho key sử dụng trong bài.
+
 Đây là hai khái niệm hay bị nhầm lẫn nhưng thực ra ở **hai tầng khác nhau**, và **bổ sung cho nhau** chứ không thay thế.
 
 ## Cấu trúc repo

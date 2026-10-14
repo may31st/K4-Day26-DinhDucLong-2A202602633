@@ -12,9 +12,13 @@ Cách chạy:
 from google import genai
 from google.genai import types
 
-client = genai.Client()
+# Retry temporary overload responses without restarting the tool-calling loop.
+client = genai.Client(http_options=types.HttpOptions(
+    timeout=60000,
+    retry_options=types.HttpRetryOptions(attempts=5, initial_delay=1, max_delay=8),
+))
 
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.5-flash"
 
 SYSTEM_INSTRUCTION = (
     "Bạn là trợ lý thời tiết thân thiện, trả lời bằng tiếng Việt tự nhiên. "

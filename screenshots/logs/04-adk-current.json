@@ -1,0 +1,157 @@
+{
+  "id": "c98f5747-a9d3-47e6-b66a-703f7de9a47f",
+  "appName": "weather_agent",
+  "userId": "user",
+  "state": {
+    "__session_metadata__": {
+      "displayName": "Thời tiết hiện tại ở Hà Nội thế nào? Dùng get_c..."
+    }
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Thời tiết hiện tại ở Hà Nội thế nào? Dùng get_current_weather, nêu nhiệt độ, cảm giác như, độ ẩm, gió, UV, tầm nhìn và thời điểm cập nhật. Trả lời ngắn gọn bằng tiếng Việt."
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-7f6ba6a9-eafc-4012-88ce-0535a5fede8b",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": ""
+      },
+      "id": "a905040c-6621-43a5-a2e2-e517deffe3c2",
+      "timestamp": 1791953935.0041354
+    },
+    {
+      "modelVersion": "gemini-3.6-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_441970",
+              "args": {
+                "city": "Hanoi"
+              },
+              "name": "get_current_weather"
+            },
+            "thoughtSignature": "EqkECqYEAWkUfRPE1Szjpq1nhkaQWhrk8LrtA-HgtHgSKQBHvZdIsSZd1yurj8lF_qI6d-TpW0WAtKX5OSVZEO0okHO6EO4ltj1kZMeX9kHqrc3J9hIuwYk3mIqOaEjLO5oOJ1UuButm_evhcwZDIHJILQy6uu5nNVASUbEWzoYa24-3AxL8qwyjS7qnh5Yj3wnYDZBOZRyVvGUE_8QMvce2g7uFD7UgHDM6qEZ6IVRRfJaFnOKEWMEal0DCpCNpRbm5S1gIsV-gifK8FGLd26A9X6m8PyrfQIpEHjOywHfLXDkHHRmMzSYTk998NrRQo1ZZj2CjcbBrxJ0X1IeovegQLymMn_3lBKBtDxWPsOrJDnuXasKzjJtBML5H4ZG9Qy2Fn1OyXQr3By58H_Y_qudYNNboYmRx4V8omzlE5b5MsaFFZpDiWsnBbsO721dx-xcpIl9_oa2L7Nuj8QExpg9jAS3ZYk3cElzaxxMGTLKn83JDX4w9YEMidUnDZehgARmBsvvzVrpwAQajC1Sx9WX6-xUIIpCnM7re9RTLZi8Mp_pgtoy3l_EEmsADI2cTw_EAeOS2MgsAgXcnXDdcis1peY8Z2DyJjh9mTED03UcS5wme81TGP4OQyYKIMc4CpXWHOoehVK0oPPS-CzuKE3jZrRgwH-nIoP7bbFvqaYV0yoKp1_nql3oKig__mPu4q9Y0PkbYVEPrrrCEQ2I-kpFo7p0UhSZOUly8UQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 19,
+        "promptTokenCount": 460,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 460
+          }
+        ],
+        "thoughtsTokenCount": 111,
+        "totalTokenCount": 590
+      },
+      "invocationId": "e-7f6ba6a9-eafc-4012-88ce-0535a5fede8b",
+      "author": "weather_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "weather_agent@1"
+      },
+      "longRunningToolIds": [],
+      "id": "5196a8b6-dc23-490e-9583-d81e05eea2a0",
+      "timestamp": 1791953948.3448682
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_441970",
+              "name": "get_current_weather",
+              "response": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "\nCurrent Weather for Hanoi, , Vietnam:\n\nTemperature: 32.9°C (91.2°F)\nFeels like: 35.4°C (95.7°F)\nCondition: Sunny\nHumidity: 47%\nWind: 3.6 km/h (2.2 mph) SW\nPressure: 1016.0 mb\nUV Index: 6.9\nVisibility: 10.0 km\n\nLast updated: 2026-10-14 11:45\n"
+                  }
+                ],
+                "structuredContent": {
+                  "result": "\nCurrent Weather for Hanoi, , Vietnam:\n\nTemperature: 32.9°C (91.2°F)\nFeels like: 35.4°C (95.7°F)\nCondition: Sunny\nHumidity: 47%\nWind: 3.6 km/h (2.2 mph) SW\nPressure: 1016.0 mb\nUV Index: 6.9\nVisibility: 10.0 km\n\nLast updated: 2026-10-14 11:45\n"
+                },
+                "isError": false
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-7f6ba6a9-eafc-4012-88ce-0535a5fede8b",
+      "author": "weather_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "weather_agent@1"
+      },
+      "id": "5137e3ae-854a-4c01-8aca-24cc426a5187",
+      "timestamp": 1791953951.5884335
+    },
+    {
+      "modelVersion": "gemini-3.6-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Thời tiết hiện tại tại Hà Nội:\n\n- **Nhiệt độ:** 32.9°C\n- **Cảm giác như:** 35.4°C\n- **Độ ẩm:** 47%\n- **Gió:** 3.6 km/h (hướng Tây Nam)\n- **Chỉ số UV:** 6.9\n- **Tầm nhìn:** 10.0 km\n- **Thời điểm cập nhật:** 11:45 ngày 14/10/2026",
+            "thoughtSignature": "Ev0DCvoDAWkUfRMR3DmXcxKZXEGdec2PyqirkVNCxTv2OpYEo3kpC9qtQ6m_5f_Coc6ctU7qvvDaSp98o3OtzpLtRtHhaPwLM3_qGDNxQZdgAkKoD29xWGWbLK5GzEPO0Gi8F8SstUYk_hNf-uvCpALXw0Wk9A2xF-GlI1eKZxgZfX0ZGA1XV3C9Ld_MRRYabW78duVfbqgr1RO7r7yQiSWC65Al2IllE5gxpmZnXbPMWw1_fhVnk0slXhh7ybJTnYsU_XuRM8CORpcIx1g_ovF1O8mcTRuWukNgkpwqPHwldKFhfJDMqCqa4_McDUN9GgeEcCLn1RFvoPEtazZXPu1JuMS_ebnxKq1xquzh1TpXcwRBP5-Hn4nQZNTX2txLsgJtvlevtqgCkL2_3BZBfesj_YgtO4azK_lsXuHSbdPyEDAC64PpizOz38N7F630HjYRj_qBeThOR30Ji-uo9SQc5KmpdVHWGP6y9oWyUOtHqqVjIt3Hm7RgI_x6SkQDug_M1R0p5ondDtre25uxqh3W_WwqbXlW-nucfLCeMRzazYrdMqYyeinOsWkMwIvxDQ1IkQpTZ6_c-BCz2BtVU5JMN-TTv2-j_P-pKXx8ziR7_P5NBBI4q0FsuahDYc9Ci-LzA6ML0jioRkgVu7_bqUgJN1DDWIknXl_ddTzpWHw="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 119,
+        "promptTokenCount": 875,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 875
+          }
+        ],
+        "thoughtsTokenCount": 144,
+        "totalTokenCount": 1138
+      },
+      "invocationId": "e-7f6ba6a9-eafc-4012-88ce-0535a5fede8b",
+      "author": "weather_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "weather_agent@1"
+      },
+      "id": "b2e87208-1222-4fbf-814c-4e7dc649827d",
+      "timestamp": 1791953951.7232993
+    }
+  ],
+  "lastUpdateTime": 1791953951.7232993
+}

@@ -1,0 +1,17 @@
+Day 26 — 02-mcp-client
+Executed: 2026-10-14T11:49:56.980764+07:00
+Working directory: 02-mcp-basics
+Command: python weather_client.py
+Exit code: 0
+
+Tools server cung cấp:
+  - get_weather: Lấy thời tiết hiện tại của một thành phố.
+
+call_tool get_weather(city='Hanoi'):
+  -> Hanoi: 29°C, trời mưa
+
+call_tool get_weather(city='Danang'):
+  -> Danang: 30°C, nhiều mây
+
+call_tool get_weather(city='Haiphong'):
+  -> Haiphong: 33°C, mưa rào

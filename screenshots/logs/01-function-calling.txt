@@ -1,0 +1,33 @@
+Day 26 — 01-function-calling
+Executed: 2026-10-14T11:57:24.720286+07:00
+Working directory: 01-function-calling
+Command: python weather_function_calling.py
+Exit code: 0
+
+User: Thời tiết Hà Nội và Đà Nẵng hôm nay thế nào?
+
+  [model yêu cầu] get_weather({'city': 'Hà Nội'})
+  [app thực thi]  -> {"city": "Hà Nội", "nhiệt_độ": "29°C", "thời_tiết": "trời mưa nhẹ", "độ_ẩm": "82%", "gió": {"hướng": "Đông Nam", "tốc_độ": "12 km/h"}}
+  [model yêu cầu] get_weather({'city': 'Đà Nẵng'})
+  [app thực thi]  -> {"city": "Đà Nẵng", "nhiệt_độ": "30°C", "thời_tiết": "nhiều mây", "độ_ẩm": "78%", "gió": {"hướng": "Đông", "tốc_độ": "10 km/h"}}
+Trả lời: Dưới đây là thông tin thời tiết hôm nay tại **Hà Nội** và **Đà Nẵng**:
+
+---
+
+### 🌧️ **Hà Nội**
+* **Thời tiết:** Trời mưa nhẹ
+* **Nhiệt độ:** 29°C
+* **Độ ẩm:** 82% 💧
+* **Gió:** Đông Nam, 12 km/h 💨
+
+👉 **Lời khuyên:** Đừng quên mang theo một chiếc ô ☂️ hoặc áo mưa khi ra ngoài để tránh những cơn mưa bất chợt nhé!
+
+---
+
+### 🌤️ **Đà Nẵng**
+* **Thời tiết:** Nhiều mây, không mưa
+* **Nhiệt độ:** 30°C
+* **Độ ẩm:** 78% 💧
+* **Gió:** Đông, 10 km/h 💨
+
+👉 **Lời khuyên:** Thời tiết khá dễ chịu và thích hợp cho các hoạt động ngoài trời. Bạn nên mặc trang phục mỏng nhẹ, thoáng mát để thoải mái hơn nhé! 👕✨

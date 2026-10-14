@@ -1,0 +1,158 @@
+{
+  "id": "a1bc101d-01bf-4de4-accd-c2e7af879389",
+  "appName": "weather_agent",
+  "userId": "user",
+  "state": {
+    "__session_metadata__": {
+      "displayName": "Cho tôi dự báo thời tiết Tokyo trong 3 ngày. Dù..."
+    }
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Cho tôi dự báo thời tiết Tokyo trong 3 ngày. Dùng get_forecast(city=\"Tokyo\", days=3) và trình bày ngắn gọn bằng tiếng Việt trong bảng: ngày, nhiệt độ cao/thấp, điều kiện thời tiết, khả năng mưa."
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-09ea8394-df1e-4ae2-97e0-d94b93c3c66a",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": ""
+      },
+      "id": "e5e5b2be-b657-4c69-b8b3-c678adec1e80",
+      "timestamp": 1791954003.5932543
+    },
+    {
+      "modelVersion": "gemini-3.6-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_746864",
+              "args": {
+                "days": 3,
+                "city": "Tokyo"
+              },
+              "name": "get_forecast"
+            },
+            "thoughtSignature": "EqkDCqYDAWkUfRPhF4xsAoJoxVGdXRzyvWOpwDgvPP99ZtPTXdHycjfxaFFdnAT_KJglf5CohbSPg3lyGBER7uABvqhP6plye29lw44jEOkk1HcIhkjNUuvHO4R3oSmP6sGzfZkYzx8IfvXK87SIlAERHN9zQhIjKqv3nqVtVFVio1KGI5s1BqCviDlM_mLRFMMLx4OosnDdd87vJJYPp_7YcztbSUVdHV4eUFipQ3PpYgQ4sgtG2CCJqihOrNs7fGEY5NHkMy7QbHHpqq0kUn3yMtgBoBBcTBI3q9zbev-PIA50flgJq9AVLT9CB50xIXyIRi08KuKlfIkXdisBCf0opacbs24D9iHZzpT7yUUYHcs_vUDMe_301_XM7HWPM2PuPIkeJL0t3bvv3zCXJGXHGqNC0eZKsp9ULvFJPUQrGXJiCi--4Z8EPPzI8wr-9-8kb_UAKYUSh0uN5l6AHV81QukB99lB8z7ycnK5zpSz8Iikv52PQ-cTHPArr4Jt83ki6VqvG2j9ndotykA28AzM2gUZsh9wEWdD94IBRhpzZe7Tng6YPBD4S48="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 465,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 465
+          }
+        ],
+        "thoughtsTokenCount": 81,
+        "totalTokenCount": 566
+      },
+      "invocationId": "e-09ea8394-df1e-4ae2-97e0-d94b93c3c66a",
+      "author": "weather_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "weather_agent@1"
+      },
+      "longRunningToolIds": [],
+      "id": "96377c09-7315-4ddd-8a82-950be865607b",
+      "timestamp": 1791954003.9037633
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_746864",
+              "name": "get_forecast",
+              "response": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Weather Forecast for Tokyo, Tokyo, Japan:\n---\n\n2026-10-14:\nHigh: 28.5°C (83.4°F)\nLow: 20.7°C (69.2°F)\nCondition: Sunny\nChance of Rain: 57%\nMax Wind: 23.8 km/h\nUV Index: 3.9\n\n---\n\n2026-10-15:\nHigh: 21.8°C (71.2°F)\nLow: 18.5°C (65.4°F)\nCondition: Partly Cloudy\nChance of Rain: 7%\nMax Wind: 16.2 km/h\nUV Index: 3.7\n\n---\n\n2026-10-16:\nHigh: 25.0°C (77.1°F)\nLow: 19.5°C (67.1°F)\nCondition: Overcast\nChance of Rain: 13%\nMax Wind: 14.4 km/h\nUV Index: 4.6\n"
+                  }
+                ],
+                "structuredContent": {
+                  "result": "Weather Forecast for Tokyo, Tokyo, Japan:\n---\n\n2026-10-14:\nHigh: 28.5°C (83.4°F)\nLow: 20.7°C (69.2°F)\nCondition: Sunny\nChance of Rain: 57%\nMax Wind: 23.8 km/h\nUV Index: 3.9\n\n---\n\n2026-10-15:\nHigh: 21.8°C (71.2°F)\nLow: 18.5°C (65.4°F)\nCondition: Partly Cloudy\nChance of Rain: 7%\nMax Wind: 16.2 km/h\nUV Index: 3.7\n\n---\n\n2026-10-16:\nHigh: 25.0°C (77.1°F)\nLow: 19.5°C (67.1°F)\nCondition: Overcast\nChance of Rain: 13%\nMax Wind: 14.4 km/h\nUV Index: 4.6\n"
+                },
+                "isError": false
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-09ea8394-df1e-4ae2-97e0-d94b93c3c66a",
+      "author": "weather_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "weather_agent@1"
+      },
+      "id": "4f0e184a-7e84-466c-a819-d36ac4b853cc",
+      "timestamp": 1791954007.7797413
+    },
+    {
+      "modelVersion": "gemini-3.6-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Dưới đây là dự báo thời tiết Tokyo trong 3 ngày tới:\n\n| Ngày | Nhiệt độ (Cao / Thấp) | Điều kiện thời tiết | Khả năng mưa |\n| :--- | :--- | :--- | :--- |\n| **14/10/2026** | 28.5°C / 20.7°C | Nắng | 57% |\n| **15/10/2026** | 21.8°C / 18.5°C | Có mây rải rác | 7% |\n| **16/10/2026** | 25.0°C / 19.5°C | Nhiều mây (U ám) | 13% |",
+            "thoughtSignature": "EtEECs4EAWkUfRPrVCDjNoVpGbSYDSrjTgcQDz3jKd1ZmICRnSpPQIIhaozkMYY_zwlKqtU1lFLdvcNdG3DAnZBEgbc7mcbqR-uipCwUUPS_e8Raj7wtwkKWBzYV01oHhmzdAs8yhfBVaQPyqiDDApHee7ajhpb_2jV6DM-8sNuqd1wiRYkG1MzNfGStT4xL-ArusCnWqYCRs0veX1jTezRiAgTL9He-xKUm59oizfujH0uWZhB1Krvx3wY5B40S7XP__-Ja-IFyAf8lzEvpHEswfUxDRgn77yJqd6IpwAw7Nm12AYQgEUmldzmvcyvMt6xHyyNd8jotMUJrT1SSScjjZ9Qnhcaailybu7iqO9pydFHXUS-mTCU24-SANGGjhSkmfJ_tSaQO3UeLxT_fSLo6z4pgFoeGQ6OLlZuw9WvKonJtagOO-blHYPFEWPN1Ay-0vAMsJjyZ8PGf-cLmwIardEaFp1eX7_vHnNFgMT7J1915di5ACKAIFBVVgJsC_2NFtNuZjwV8R2y-16zyP2DSfaLgIjTmgVCI8BwaagOBO698N8Tpk79ozeHAVFgIB4U-N0sk2FXtryLB6ozs_r45DJ19x4gk3kM8QK-As-RRSFvtgTwvaJamRhYz7GP5OprYOqTlScHClpFO8aUMyDIqP19NxT7ZM0u02NOWAPpb5Go2ZAl-iUA28gw6iMoPThx84AavIhAa0aEN6-nt5PH9H6LmqnP1PfMoLwNRSlakkvqQYq-Dujik6fPXrlQ9_sUmonvcaFx9AM853VS0Hnd0reg="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 179,
+        "promptTokenCount": 1121,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1121
+          }
+        ],
+        "thoughtsTokenCount": 202,
+        "totalTokenCount": 1502
+      },
+      "invocationId": "e-09ea8394-df1e-4ae2-97e0-d94b93c3c66a",
+      "author": "weather_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "weather_agent@1"
+      },
+      "id": "b16b4666-f37e-4bda-979a-3265953e29a2",
+      "timestamp": 1791954007.8339417
+    }
+  ],
+  "lastUpdateTime": 1791954007.8339417
+}

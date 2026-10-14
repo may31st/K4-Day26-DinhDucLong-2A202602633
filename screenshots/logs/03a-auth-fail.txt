@@ -1,0 +1,60 @@
+Negative authentication verification: POST http://localhost:8000/mcp with invalid bearer token
+HTTP 401
+Body: {"error": "invalid_token", "error_description": "Authentication required"}
+
+Day 26 — 03a-auth-fail
+Executed: 2026-10-14T11:50:54.540429+07:00
+Working directory: 03-production
+Command: python auth_client.py
+Exit code: 1
+
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\03-production\auth_client.py", line 49, in <module>
+  |     asyncio.run(main())
+  |   File "C:\Users\longd\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py", line 195, in run
+  |     return runner.run(main)
+  |            ^^^^^^^^^^^^^^^^
+  |   File "C:\Users\longd\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+  |     return self._loop.run_until_complete(task)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\longd\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py", line 691, in run_until_complete
+  |     return future.result()
+  |            ^^^^^^^^^^^^^^^
+  |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\03-production\auth_client.py", line 32, in main
+  |     async with streamable_http_client(SERVER_URL, http_client=http_client) as (
+  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\longd\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 771, in streamable_http_client
+  |     anyio.create_task_group() as tg,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 788, in streamable_http_client
+    |     yield read_stream, write_stream
+    |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\03-production\auth_client.py", line 36, in main
+    |     async with ClientSession(read, write) as session:
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\.venv\Lib\site-packages\mcp\client\session.py", line 514, in __aexit__
+    |     result = await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 847, in __aexit__
+    |     raise BaseExceptionGroup(
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\03-production\auth_client.py", line 37, in main
+      |     await session.initialize()
+      |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\.venv\Lib\site-packages\mcp\client\session.py", line 654, in initialize
+      |     result = await self.send_request(
+      |              ^^^^^^^^^^^^^^^^^^^^^^^^
+      |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\.venv\Lib\site-packages\mcp\client\session.py", line 586, in send_request
+      |     raw = await self._dispatcher.send_raw_request(method, data.get("params"), opts)
+      |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      |   File "D:\ViAI\Track3\K4-Track3A-Day26-DinhDucLong-2A202602633\.venv\Lib\site-packages\mcp\shared\jsonrpc_dispatcher.py", line 461, in send_raw_request
+      |     raise MCPError(code=outcome.code, message=outcome.message, data=outcome.data)
+      | mcp.shared.exceptions.MCPError: Server returned an error response
+      +------------------------------------
